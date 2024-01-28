@@ -1,5 +1,6 @@
 import { useRef, useState } from "react"
 import Button from "../../Components/Button"
+import ProjectConcepts from "../../Components/ProjectConcepts"
 
 const Project2TextUtility = () => {
     const [textData, setTextData] = useState('')
@@ -19,11 +20,23 @@ const Project2TextUtility = () => {
     }
     const handleClearText = () => setTextData('')
 
-    console.log(textData.length)
+    const concepts = [
+        'Learned about useRef hook',
+        'Learned about onChange event listener',
+        'Learned about window object',
+        'Arrow function optimization',
+        'Learn about logic building'
+
+    ]
     return (
         <div className="flex pb-20 relative bg-gray-700 flex-col gap-2 ">
-            <h1 className="md:text-4xl text-2xl  text-center text-white ">Text Utility</h1>
-            <Button show={show} setShow={setShow} />
+            <div className={`border-2 absolute ${show ? '-left-[1800px]' : 'left-0'} transition-all delay-300 ease-in-out    min-h-full min-w-full bg-black`}>
+                <ProjectConcepts concepts={concepts} />
+            </div>
+            <h1 className="md:text-4xl text-2xl mt-3 md:mt-0  text-center text-white ">Text Utility</h1>
+            <div className="absolute top-2 right-2">
+                <Button show={show} setShow={setShow} />
+            </div>
             <div className="flex flex-col p-3 md:p-0 max-w-5xl mx-auto" >
                 <textarea ref={copyRef} value={textData} onChange={(e) => setTextData(e.target.value)} placeholder="Enter the text here . . ." className="md:w-[70vw] w-full p-3 rounded-lg font-semibold outline-none  h-56" cols={30} rows={10}></textarea>
                 <div className="buttons flex flex-wrap text-sm items-center justify-center gap-3 mt-3">

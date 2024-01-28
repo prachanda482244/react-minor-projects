@@ -66,8 +66,9 @@ const Project1BgChanger = () => {
             </div>
             {
                 show ?
-                    <div style={{ transition: "opacity 0.3s", opacity: show ? 1 : 0 }}>
-                        <ProjectConcepts color={color} concepts={concepts} /> </div>
+                    <div className="mt-16 md:mt-0">
+                        <ProjectConcepts color={color} concepts={concepts} />
+                    </div>
                     : null
             }
         </div>

@@ -1,0 +1,25 @@
+@keyframes animated-border {
+  0% {
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+  }
+  25% {
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+  }
+  50% {
+    border-right: 1px solid purple;
+  }
+  75% {
+    border-bottom: 1px solid purple;
+    border-left: 1px solid transparent;
+  }
+  100% {
+    border-top: 1px solid purple;
+    border-left: 1px solid purple;
+  }
+}
+
+.animated-border {
+  animation: animated-border 2s infinite;
+}
