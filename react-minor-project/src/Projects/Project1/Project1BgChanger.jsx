@@ -1,6 +1,8 @@
 import { useState } from "react"
+import ProjectConcepts from "../../Components/ProjectConcepts";
 
 const Project1BgChanger = () => {
+    const [show, setShow] = useState(false)
     const [color, setColor] = useState('black')
     const popularColors = [
         "Red",
@@ -34,19 +36,23 @@ const Project1BgChanger = () => {
         "MediumSpringGreen",
     ];
 
+    const concepts = [
+        "Learned About useState Hook",
+        "How to pass dynamic value to background"
+    ]
 
     const handleBgChange = (e) => {
         setColor(e.target.value)
     }
     return (
-        <div style={{ backgroundColor: color }} className="min-w-screen  p-2 min-h-screen md:min-h-[545px]">
+        <div style={{ backgroundColor: color, transition: "background-color .5s" }} className="min-w-screen relative  p-2 min-h-screen md:min-h-[545px]">
             <div className="text-white flex border-2 p-2 items-center justify-center rounded-lg flex-wrap gap-2  top-2">
                 {
                     popularColors.map((color) => (
                         <button
                             value={color.toLowerCase()}
                             style={{ backgroundColor: color.toLowerCase() }}
-                            className="px-2 py-1 rounded-lg font-semibold uppercase text-black"
+                            className="px-2 py-1 transition-colors delay-300 ease-in-out rounded-lg font-semibold uppercase text-black"
                             key={color}
                             onClick={handleBgChange}
                         >{color}</button>
@@ -54,6 +60,13 @@ const Project1BgChanger = () => {
                 }
             </div>
             <h1 className="text-center text-2xl text-white p-3">Background - Changer </h1>
+            <button className={`text-white absolute font-semibold ${show ? 'bg-blue-600' : ''} border-2 right-5 p-2 rounded-lg shadow-xl  border-blue-600`} onClick={() => setShow(!show)}>Concept I Learned</button>
+            {
+                show ?
+                    <div style={{ transition: "opacity 0.3s", opacity: show ? 1 : 0 }}>
+                        <ProjectConcepts color={color} concepts={concepts} /> </div>
+                    : null
+            }
         </div>
     )
 }
