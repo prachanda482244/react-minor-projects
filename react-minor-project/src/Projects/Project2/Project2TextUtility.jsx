@@ -1,6 +1,7 @@
 const Project2TextUtility = () => {
     return (
-        <div>
+        <div className="flex flex-col ">
+            <h1 className="text-xl text-center">Text Utility</h1>
             Text Utility with useState - onchange<br />
             text area for the input<br />
             buttons for upper case , lower case  , copy , remove extra spaces  <br />
