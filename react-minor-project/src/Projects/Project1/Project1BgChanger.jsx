@@ -61,15 +61,13 @@ const Project1BgChanger = () => {
                 }
             </div>
             <h1 className="text-center text-2xl text-white p-3">Background - Changer </h1>
-            <div className="absolute right-2">
+            <div className="absolute z-10  right-2">
                 <Button show={show} setShow={setShow} />
             </div>
             {
-                show ?
-                    <div className="mt-16 md:mt-0">
-                        <ProjectConcepts color={color} concepts={concepts} />
-                    </div>
-                    : null
+                <div className={`mt-16 ${show ? 'opacity-100' : 'opacity-0 '} transition-all delay-300 ease-linear md:mt-0`}>
+                    <ProjectConcepts color={color} concepts={concepts} />
+                </div>
             }
         </div>
     )
