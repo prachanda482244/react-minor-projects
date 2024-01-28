@@ -7,8 +7,8 @@ import Navbar from "./Components/Navbar"
 const App = () => {
   return (
     <div>
+      <Navbar />
       <Routes>
-        <Route path="/" element={<Navbar />} />
         <Route path="/project1" element={<Project1BgChanger />} />
         <Route path="/project2" element={<Project2TextUtility />} />
         <Route path="/project3" element={<Project3PasswordGenerator />} />
