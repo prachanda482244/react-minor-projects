@@ -39,7 +39,7 @@ const Project1BgChanger = () => {
         setColor(e.target.value)
     }
     return (
-        <div style={{ backgroundColor: color }} className="min-w-screen  p-2 min-h-[545px]">
+        <div style={{ backgroundColor: color }} className="min-w-screen  p-2 min-h-screen md:min-h-[545px]">
             <div className="text-white flex border-2 p-2 items-center justify-center rounded-lg flex-wrap gap-2  top-2">
                 {
                     popularColors.map((color) => (

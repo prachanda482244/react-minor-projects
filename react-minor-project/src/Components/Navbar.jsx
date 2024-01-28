@@ -23,7 +23,7 @@ const Navbar = () => {
             <ul className="flex items-center flex-wrap md:mr-40 gap-5">
                 {
                     navLinks.map((link) => (
-                        <NavLink key={link.name} className={({ isActive }) => `py-1 px-4 rounded-lg bg-white ${isActive ? 'bg-blue-900' : 'text-black '} `} to={link.url}>{link.name}</NavLink>
+                        <NavLink key={link.name} className={({ isActive }) => `py-1 px-4 rounded-lg text-black bg-white ${isActive ? 'bg-blue-900' : 'text-black '} `} to={link.url}>{link.name}</NavLink>
                     ))
                 }
             </ul>
