@@ -21,15 +21,20 @@ const Project2TextUtility = () => {
     const handleClearText = () => setTextData('')
 
     const concepts = [
-        'Learned about useRef hook',
-        'Learned about onChange event listener',
-        'Learned about window object',
-        'Arrow function optimization',
-        'Learn about logic building'
+        'State Management with useState',
+        'Ref Hook Usage for managing textarea reference (useRef)',
+        'Event Handling with onClick and onChange',
+        'Clipboard Interaction using navigator.clipboard API',
+        'Dynamic UI with conditional rendering and transitions',
+        'CSS Styling with Tailwind CSS classes',
+        'Logic Building for text transformation functions',
+        'Component Organization with modular sections',
+        'Custom Button Component Usage',
+        'Dynamic Content Update and Preview Display',
+    ];
 
-    ]
     return (
-        <div className="flex pb-20 relative bg-gray-700 flex-col gap-2 ">
+        <div className="flex pb-28 relative bg-gray-700 flex-col gap-2 ">
             <div className={`border-2 absolute ${show ? '-left-[1800px]' : 'left-0'} transition-all delay-300 ease-in-out    min-h-full min-w-full bg-black`}>
                 <ProjectConcepts concepts={concepts} />
             </div>

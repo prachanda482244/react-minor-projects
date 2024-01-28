@@ -38,9 +38,17 @@ const Project1BgChanger = () => {
     ];
 
     const concepts = [
-        "Learned About useState Hook",
-        "How to pass dynamic value to background"
-    ]
+        'State Management with useState',
+        'Dynamic Styling by updating background color based on state',
+        'Handling Dynamic Values for background color change',
+        'Event Handling with onClick',
+        'Conditional Rendering based on state',
+        'CSS Styling with inline styles and Tailwind CSS',
+        'Transition Effects for smooth UI changes',
+        'Button Component for toggling additional content',
+        'Mapping and Rendering Array Elements in JSX',
+    ];
+
 
     const handleBgChange = (e) => {
         setColor(e.target.value)
