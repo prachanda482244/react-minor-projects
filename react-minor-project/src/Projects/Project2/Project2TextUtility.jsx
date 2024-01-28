@@ -1,7 +1,9 @@
 import { useRef, useState } from "react"
+import Button from "../../Components/Button"
 
 const Project2TextUtility = () => {
     const [textData, setTextData] = useState('')
+    const [show, setShow] = useState(true)
     const copyRef = useRef(null)
 
     const handleUppercase = () => setTextData(textData.toUpperCase())
@@ -19,8 +21,9 @@ const Project2TextUtility = () => {
 
     console.log(textData.length)
     return (
-        <div className="flex pb-20 bg-gray-700 flex-col gap-2 ">
+        <div className="flex pb-20 relative bg-gray-700 flex-col gap-2 ">
             <h1 className="md:text-4xl text-2xl  text-center text-white ">Text Utility</h1>
+            <Button show={show} setShow={setShow} />
             <div className="flex flex-col p-3 md:p-0 max-w-5xl mx-auto" >
                 <textarea ref={copyRef} value={textData} onChange={(e) => setTextData(e.target.value)} placeholder="Enter the text here . . ." className="md:w-[70vw] w-full p-3 rounded-lg font-semibold outline-none  h-56" cols={30} rows={10}></textarea>
                 <div className="buttons flex flex-wrap text-sm items-center justify-center gap-3 mt-3">

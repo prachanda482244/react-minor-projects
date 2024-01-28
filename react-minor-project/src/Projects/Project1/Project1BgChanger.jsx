@@ -1,5 +1,6 @@
 import { useState } from "react"
 import ProjectConcepts from "../../Components/ProjectConcepts";
+import Button from "../../Components/Button";
 
 const Project1BgChanger = () => {
     const [show, setShow] = useState(false)
@@ -60,7 +61,9 @@ const Project1BgChanger = () => {
                 }
             </div>
             <h1 className="text-center text-2xl text-white p-3">Background - Changer </h1>
-            <button className={`text-white absolute font-semibold ${show ? 'bg-blue-600' : ''} border-2 right-5 p-2 rounded-lg shadow-xl  border-blue-600`} onClick={() => setShow(!show)}>Concept I Learned</button>
+            <div className="absolute right-2">
+                <Button show={show} setShow={setShow} />
+            </div>
             {
                 show ?
                     <div style={{ transition: "opacity 0.3s", opacity: show ? 1 : 0 }}>
