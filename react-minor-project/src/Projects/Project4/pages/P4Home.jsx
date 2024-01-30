@@ -10,7 +10,6 @@ const P4Home = () => {
                     {jsxCodeArray?.map((element) => (
                         <div className={` ${element.classes !== 'ml-0' ? element.classes : 'ml-0'} font-semibold text-xs sm:text-sm md:text-xl hover:text-black cursor-pointer transition-all delay-100 ease-linear `} key={element.name}>{element.name}</div>
                     ))}
-
                 </div>
             </div>
         </div>
