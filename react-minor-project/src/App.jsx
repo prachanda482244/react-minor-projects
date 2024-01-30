@@ -14,7 +14,7 @@ const App = () => {
         <Route path="/project1" element={<Project1BgChanger />} />
         <Route path="/project2" element={<Project2TextUtility />} />
         <Route path="/project3" element={<Project3PasswordGenerator />} />
-        <Route path="/project4" element={<Project4Routing />} />
+        <Route path="/project4/*" element={<Project4Routing />} />
         <Route path="/project5" element={<Project5Todo />} />
       </Routes>
 
