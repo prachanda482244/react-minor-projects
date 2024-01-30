@@ -2,14 +2,14 @@ import { NavLink } from 'react-router-dom'
 
 const P4Navbar = () => {
     const navLinks = [
-        { url: '/project4/', name: 'home' },
+        { url: '/project4/home', name: 'home' },
         { url: '/project4/about', name: 'about' },
         { url: '/project4/contact', name: 'contact' },
-        { url: '/project4/services', name: 'services' },
+        { url: '/project4/greeting', name: 'Greeting' },
     ]
     return (
         <nav className='flex items-center bg-purple-800 shadow-lg p-3 text-slate-300 justify-between'>
-            <div>Project 4</div>
+            <div className='bg-white p-2 text-slate-800 border border-white rounded-lg font-semibold shadow-xl'>Nested Routing</div>
             <ul className='flex -items-center font-semibold gap-3 uppercase'>
                 {
                     navLinks?.map((link) => (
