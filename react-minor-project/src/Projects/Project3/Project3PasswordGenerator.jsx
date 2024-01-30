@@ -47,13 +47,13 @@ const Project3PasswordGenerator = () => {
 
     return (
         <div className="bg-black">
-            <div className="bg-purple-800 flex flex-col gap-2 p-3 md:w-1/2 mx-auto">
+            <div className="bg-purple-800  flex flex-col gap-2 px-3  md:w-1/2 mx-auto">
                 <h1 className="text-2xl uppercase text-center font-bold text-white p-2 ">Password Generator</h1>
                 <div className="flex items-center justify-between gap-2 ">
                     <input ref={passRef} value={password} type="text" readOnly className="p-2 rounded-lg w-full focus:border-none outline-purple-800" />
                     <button onClick={handleCopy} className="bg-sky-500 py-2 px-4 rounded-lg shadow-lg font-semibold">Copy</button>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center p-3 gap-2">
                     <div className="flex items-center gap-2">
                         <input type="range" id="length" min={8} max={60} value={length} onChange={(e) => setLength(e.target.value)} />
                         <label htmlFor="length" className="text-slate-200 font-semibold">Length : {length}</label>

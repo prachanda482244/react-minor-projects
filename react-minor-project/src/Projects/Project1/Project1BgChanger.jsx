@@ -61,7 +61,7 @@ const Project1BgChanger = () => {
                         <button
                             value={color.toLowerCase()}
                             style={{ backgroundColor: color.toLowerCase() }}
-                            className="px-2 py-1 transition-colors delay-300 ease-in-out rounded-lg font-semibold uppercase text-black"
+                            className="px-2 py-1 transition-colors delay-1000 ease-in-out rounded-lg font-semibold uppercase text-black"
                             key={color}
                             onClick={handleBgChange}
                         >{color}</button>

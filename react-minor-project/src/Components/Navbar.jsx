@@ -13,6 +13,13 @@ const Navbar = () => {
         {
             url: '/project3',
             name: 'Project 3'
+        }, {
+            url: '/project4',
+            name: 'Project 4'
+        },
+        {
+            url: '/project5',
+            name: 'Project 5'
         }
     ]
     return (
