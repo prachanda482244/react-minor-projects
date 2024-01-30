@@ -9,7 +9,7 @@ const P4Navbar = () => {
     ]
     return (
         <nav className='flex items-center bg-purple-800 shadow-lg p-3 text-slate-300 justify-between'>
-            <div className='bg-white p-2 text-slate-800 border border-white rounded-lg font-semibold shadow-xl'>Nested Routing</div>
+            <div className='bg-white max-sm:text-sm p-2 text-slate-800 border border-white rounded-lg font-semibold shadow-xl'>Routing</div>
             <ul className='flex -items-center font-semibold gap-3 uppercase'>
                 {
                     navLinks?.map((link) => (
