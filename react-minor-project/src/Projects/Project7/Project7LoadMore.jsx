@@ -25,7 +25,6 @@ const Project7LoadMore = () => {
 
         }
     }
-    if (loading) return <div className="min-h-screen bg-black text-white flex items-center justify-center text-3xl font-bold">Loading Data ! Please Wait. .</div>
 
     useEffect(() => {
         fetchData()
@@ -35,6 +34,8 @@ const Project7LoadMore = () => {
     useEffect(() => {
         if (products && products.length === 100) setDisabledButton(true)
     }, [products])
+
+    if (loading) return <div className="min-h-screen bg-black text-white flex items-center justify-center text-3xl font-bold">Loading Data ! Please Wait. .</div>
 
 
     if (error) return <div className="min-h-screen bg-black text-white flex items-center justify-center text-3xl font-bold">Error occured ! Please Wait. .</div>
