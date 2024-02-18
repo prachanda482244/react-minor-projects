@@ -25,6 +25,10 @@ const Navbar = () => {
             url: '/project6',
             name: 'Project 6'
         },
+        {
+            url: '/project7',
+            name: 'Project 7'
+        },
     ]
     return (
         <nav className="flex items-center bg-black border-b-2 text-white p-3 justify-between">

@@ -6,6 +6,7 @@ import Navbar from "./Components/Navbar"
 import Project4Routing from "./Projects/Project4/Project4Routing"
 import Project5Accordian from "./Projects/Project5/Project5Accordian"
 import Project6StarRating from "./Projects/Project6/Project6StarRating"
+import Project7LoadMore from "./Projects/Project7/Project7LoadMore"
 
 const App = () => {
   return (
@@ -18,6 +19,8 @@ const App = () => {
         <Route path="/project4/*" element={<Project4Routing />} />
         <Route path="/project5" element={<Project5Accordian />} />
         <Route path="/project6" element={<Project6StarRating noOfStars={10} />} />
+        <Route path="/project7" element={<Project7LoadMore />} />
+
       </Routes>
 
     </div>
